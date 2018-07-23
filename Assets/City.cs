@@ -22,6 +22,7 @@ public class City : MonoBehaviour
     void Update()
     {
 
+        // 5 seconds is a month does this every month
         if ((int)Time.time % 5 == 0 && month != (int)Time.time / 5 % 12 + 1)
         {
             month = (int)Time.time / 5 % 12 + 1;
