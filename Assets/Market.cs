@@ -5,11 +5,11 @@ using UnityEngine;
 public class Market : MonoBehaviour
 {
     public float wealtha; // all money offered
-    public float wealthc;
-    public float popc;
+    public float wealthc; // wealth of city
+    public float popc; // population of city
     public float foodo; // food offered
     public float foodd; // food demanded
-    public float foodc;
+    public float foodc; // food from city
     public int harvestmon = 5; //month of harvest
     GameObject[] cities;
     GameObject city;
@@ -39,7 +39,7 @@ public class Market : MonoBehaviour
                 for (int i = 0; i < cities.Length; i++)
                 {
                     city = cities[i];
-                    float pfood;
+                    float pfood; // net food offered if positive more offered then demanded if negative more demanded then offered.
                     foodc = city.GetComponent<City>().food;
                     wealthc = city.GetComponent<City>().wealth;
                     popc = city.GetComponent<City>().pop;
