@@ -80,7 +80,6 @@ public class Market : MonoBehaviour
                         city = cities[i];
                         foodc = city.GetComponent<City>().food;
                         wealthc = city.GetComponent<City>().wealth;
-                        popc = city.GetComponent<City>().pop;
                         float pfood = foodc - (int)(popc * 12 * 1.4);
                         if (pfood < 0 && wealthc > 0)
                         {
