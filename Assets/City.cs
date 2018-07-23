@@ -35,6 +35,7 @@ public class City : MonoBehaviour
             {
                 food += (int)((farmeffper + 100) * pop * 12 / 100 * (Random.value / 2 + 0.25) * 2);
             }
+            // can't have negitive food
             if (food < 0)
             {
                 food = 0;
