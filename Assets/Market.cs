@@ -24,6 +24,7 @@ public class Market : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //checks if it is month 5
         if (((int)Time.time - 1) % 5 == 0 && month != ((int)Time.time - 1) / 5 % 12 + 1)
         {
             int year = (int)(Time.time / 60);
