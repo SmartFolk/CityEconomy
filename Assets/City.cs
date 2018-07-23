@@ -25,11 +25,13 @@ public class City : MonoBehaviour
         if ((int)Time.time % 5 == 0 && month != (int)Time.time / 5 % 12 + 1)
         {
             month = (int)Time.time / 5 % 12 + 1;
-            //Debug.Log(month);
+            //Debug.Log(month);\
+            // yeah new people
             if (food > 0)
             {
                 pop += 100 * (idealpop / (idealpop + pop));
             }
+            // people eat food
             food -= pop;
             if (month == 5)
             {
@@ -40,14 +42,17 @@ public class City : MonoBehaviour
             {
                 food = 0;
             }
+            // people die if no food
             if (food == 0)
             {
                 pop = pop / 10 * 9;
             }
+            // if their is not enough people the city dies
             if (pop < 1000)
             {
                 Destroy(this.gameObject);
             }
+            // colors city based off performance
             if (wealth < 0 || food < 0)
             {
                 GetComponent<Renderer>().material.color = new Color(255, 0, 0);
