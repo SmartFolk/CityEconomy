@@ -36,6 +36,7 @@ public class Market : MonoBehaviour
                 Debug.Log(year);
                 Debug.Log("market is open");
                 cities = GameObject.FindGameObjectsWithTag("City");
+                // defines total food offered demanded and money offered.
                 for (int i = 0; i < cities.Length; i++)
                 {
                     city = cities[i];
